@@ -3,11 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 
-import { createStore } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
-import { metroReducer } from './reducers'
+import thunk from 'redux-thunk';
 
-export const store = createStore(metroReducer);
+import { metroReducer } from './reducers';
+
+export const store = createStore(metroReducer, applyMiddleware(thunk));
 
 ReactDOM.render(
     <Provider store={store}>

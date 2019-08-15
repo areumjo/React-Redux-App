@@ -1,11 +1,14 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
+import { getData } from "../actions";
+
 const BusPosition = props => {
     return(
         <div>
             <p>Where is my bus?</p>
-            {props.busPosition}
+            <p>Bus number: 70</p>
+            <button onClick={props.getData} className="bus-btn">{props.isLoading? <p>loading...</p> : "show me bus location"}</button>
         </div>
     )
 }
@@ -17,4 +20,4 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps, {})(BusPosition);
+export default connect(mapStateToProps, { getData })(BusPosition);
