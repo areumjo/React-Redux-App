@@ -13,10 +13,10 @@ export const getData = () => {
         axios
             .get(`https://api.wmata.com/Bus.svc/json/jBusPositions?api_key=${api_KEY}&RouteID=${routeId}`)
             .then(res => {
-                console.log('API data: ', res)
+                console.log('API data: ', res.data.BusPositions)
                 dispatch({
-                    type: FETCHING_START,
-                    payload: res.data.data
+                    type: FETCHING_SUCCESS,
+                    payload: res.data.BusPositions
                 })
             })
             .catch(err => {
