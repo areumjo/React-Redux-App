@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import BusPosition from './components/BusPosition';
 
 function App() {
   return (
@@ -7,7 +8,7 @@ function App() {
       <header className="App-header">
         WA metro tracker
       </header>
-      <p>body</p>
+      <BusPosition />
     </div>
   );
 }

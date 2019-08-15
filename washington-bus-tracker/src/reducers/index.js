@@ -1,5 +1,6 @@
 const initialState = {
-    busPosition: []
+    busPosition: ['hello - hard-coded value'],
+    isLoading: false
 }
 
 export const metroReducer = (state = initialState, action) => {
