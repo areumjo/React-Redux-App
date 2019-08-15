@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        header -- trivia api
+        WA metro tracker
       </header>
       <p>body</p>
     </div>
