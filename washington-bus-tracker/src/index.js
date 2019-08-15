@@ -7,9 +7,9 @@ import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 
-import { metroReducer } from './reducers';
+import combineReducers from './reducers/index';
 
-export const store = createStore(metroReducer, applyMiddleware(thunk));
+export const store = createStore(combineReducers, applyMiddleware(thunk));
 
 ReactDOM.render(
     <Provider store={store}>

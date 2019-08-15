@@ -6,8 +6,8 @@ export const FETCHING_FAILURE = "FETCHING_FAILURE";
 
 const api_KEY = "e13626d03d8e4c03ac07f95541b3091b";
 
-export const getData = () => {
-    const routeId = 70;
+export const getData = (num) => {
+    const routeId = num;
     return dispatch => {
         dispatch({ type: FETCHING_START });
         axios
@@ -25,6 +25,17 @@ export const getData = () => {
                     type: FETCHING_FAILURE,
                     payload: err.response
                 })
-            })
+            }
+        )
+    }
+}
+
+export const GET_BUS_NUM = "GET_BUS_NUM";
+
+export const getBusNumber = (num) => {
+    return dispatch => {
+        dispatch({ 
+            type: GET_BUS_NUM, payload: num
+        })
     }
 }
