@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        WA metro tracker
+        Washington DC metro tracker
       </header>
       <BusPosition />
     </div>
